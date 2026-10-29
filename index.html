@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Billing System</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            padding: 25px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 3px 12px #ccc;
+        }
+
+        h1 {
+            text-align: center;
+            color: #d35400;
+        }
+
+        p {
+            color: #555;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 14px 8px;
+            border-bottom: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background: #fff0e5;
+        }
+
+        input {
+            width: 65px;
+            padding: 7px;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 12px 18px;
+            border: none;
+            border-radius: 6px;
+            background: #d35400;
+            color: white;
+            cursor: pointer;
+        }
+
+        .reset {
+            background: #555;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+
+    <h1>Food Billing System</h1>
+    <p>Select food items and enter the quantity.</p>
+
+    <form action="/bill" method="post">
+
+        <table>
+            <tr>
+                <th>Food Item</th>
+                <th>Price</th>
+                <th>Quantity</th>
+            </tr>
+
+            <tr>
+                <td>Burger</td>
+                <td>₹100</td>
+                <td>
+                    <input type="number" name="burger"
+                           min="0" max="100" value="0" required>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Pizza</td>
+                <td>₹180</td>
+                <td>
+                    <input type="number" name="pizza"
+                           min="0" max="100" value="0" required>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Juice</td>
+                <td>₹50</td>
+                <td>
+                    <input type="number" name="juice"
+                           min="0" max="100" value="0" required>
+                </td>
+            </tr>
+        </table>
+
+        <button type="submit">Generate Bill</button>
+        <button type="reset" class="reset">Reset</button>
+
+    </form>
+
+</div>
+</body>
+</html>
